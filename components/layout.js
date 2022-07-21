@@ -1,62 +1,24 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Main from './Main/Main'
 
-const name = 'Sixth'
-export const siteTitle = 'Sixth'
+export const siteTitle = 'Sixth, frontend udvikler.'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="flex flex-col h-full">
       <Head>
         <link href="/favicon-16x16.png" rel="icon" type="image/png" />
         <meta name="description" content="Frontendudvikler" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+
+      <Main>{children}</Main>
+
+      <footer className="h-40 bg-[#F8E81C] p-5 text-center relative bg-[url('/footer-bg.jpg')]">
+        <p className="text-xs text-[#B4A812] absolute w-full bottom-5 tracking-widest">
+          SIXTH.DK (C) 2022 &#8226; CVR 38418998
+        </p>
+      </footer>
     </div>
   )
 }
