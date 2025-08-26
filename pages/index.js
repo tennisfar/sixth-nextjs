@@ -21,7 +21,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
 
-      <div className="flex justify-center py-7">
+      <div className="flex justify-center py-7 drop-shadow-lg">
         <Image
           priority
           src="/images/profile.jpg"

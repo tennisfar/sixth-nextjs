@@ -6,7 +6,7 @@ export const siteTitle = 'Sixth'
 
 export default function Layout({ children, home }) {
   return (
-    <div className="flex flex-col h-full bg-[#F8E81C] bg-[url('/footer-bg.jpg')]">
+    <div className="flex flex-col h-full bg-[#F8E81C] bg-[url('/footer-bg.jpg')] bg-center">
       <Head>
         <link href="/favicon-16x16.png" rel="icon" type="image/png" />
         <meta name="description" content="Frontendudvikler" />
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
 
       <Main>{children}</Main>
 
-      <footer className="h-40 basis-40 shrink-0 p-5 text-center relative flex justify-center">
+      <footer className="h-12 basis-12 shrink-0 p-5 text-center relative flex justify-center">
         <p className="text-xs text-[#B4A812] absolute bottom-5 tracking-widest">
           SIXTH.DK &copy; 2025 &#8226; CVR 38418998
         </p>

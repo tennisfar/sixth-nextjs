@@ -3,8 +3,8 @@ import styles from './Main.module.css'
 
 export default function Main({ children }) {
   return (
-    <main className="p-5 flex-1">
-      <div className="rounded-3xl bg-baby-blue p-5 h-full">{children}</div>
+    <main className="pt-[5vh] px-[3vh] pb-5">
+      <div className="rounded-3xl bg-baby-blue p-5 pb-12 max-w-md mx-auto">{children}</div>
     </main>
   )
 }
