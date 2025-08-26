@@ -16,7 +16,7 @@ export default function Layout({ children, home }) {
 
       <footer className="h-40 basis-40 shrink-0 p-5 text-center relative flex justify-center">
         <p className="text-xs text-[#B4A812] absolute bottom-5 tracking-widest">
-          SIXTH.DK (C) 2025 &#8226; CVR 38418998
+          SIXTH.DK &copy; 2025 &#8226; CVR 38418998
         </p>
       </footer>
     </div>
