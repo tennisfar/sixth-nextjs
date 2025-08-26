@@ -6,7 +6,7 @@ export const siteTitle = 'Sixth, frontend udvikler.'
 
 export default function Layout({ children, home }) {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full bg-[url('/footer-bg.jpg')]">
       <Head>
         <link href="/favicon-16x16.png" rel="icon" type="image/png" />
         <meta name="description" content="Frontendudvikler" />
