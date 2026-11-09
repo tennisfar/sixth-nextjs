@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import BrowserFrame from '../components/BrowserFrame'
 import Highlight from '../components/Highlight'
@@ -141,6 +142,7 @@ export default function AdresseCheck() {
         <meta property="og:title" content="AdresseCheck – Danish address autocomplete for WooCommerce" />
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://sixth.dk/images/adressecheck/checkout-suggestions.png" />
+        <link href="/sixth-logo.svg" rel="icon" type="image/svg+xml" />
         <link href="/favicon-16x16.png" rel="icon" type="image/png" />
       </Head>
 
@@ -153,10 +155,13 @@ export default function AdresseCheck() {
               </span>
               AdresseCheck
             </a>
-            <span className="hidden sm:inline text-sm text-black/40">
-              by{' '}
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-sm text-black/40">
+              by
               <Link href="/">
-                <a className={`${plainLink} font-normal text-black/60 hover:text-black`}>Sixth</a>
+                <a className={`${plainLink} inline-flex items-center gap-1 font-normal text-black/60 hover:text-black`}>
+                  <Image src="/sixth-logo.svg" width={18} height={18} alt="" />
+                  Sixth
+                </a>
               </Link>
             </span>
           </div>

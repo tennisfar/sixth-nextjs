@@ -54,13 +54,14 @@ export default function Home() {
         <meta name="description" content={description} />
         <meta property="og:title" content="Sixth – WooCommerce extensions made in Denmark" />
         <meta property="og:description" content={description} />
+        <link href="/sixth-logo.svg" rel="icon" type="image/svg+xml" />
         <link href="/favicon-16x16.png" rel="icon" type="image/png" />
       </Head>
 
       <header className="sticky top-0 z-20 bg-[#fbfbf8]/80 backdrop-blur border-b border-black/5">
         <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#top" className={`${plainLink} flex items-center gap-2 text-xl tracking-tight`}>
-            <span className="w-3 h-3 rounded-full bg-[#F8E81C] ring-4 ring-[#F8E81C]/30" />
+            <Image src="/sixth-logo.svg" width={32} height={32} alt="" />
             Sixth
           </a>
           <div className="hidden md:flex items-center gap-8 text-sm">
