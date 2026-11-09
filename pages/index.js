@@ -128,7 +128,7 @@ export default function Home() {
                 </span>
                 <div>
                   <h3 className="text-2xl font-medium tracking-tight">AdresseCheck</h3>
-                  <p className="text-sm text-black/50">Coming soon to the WooCommerce Marketplace</p>
+                  <p className="text-sm text-black/50">Free · coming soon to WordPress.org</p>
                 </div>
               </div>
               <p className="text-xl">

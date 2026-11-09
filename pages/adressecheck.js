@@ -177,7 +177,7 @@ export default function AdresseCheck() {
             </a>
           </div>
           <span className="text-xs md:text-sm rounded-full bg-[#2f3234] text-white px-4 py-2">
-            Coming soon to WooCommerce
+            Free · coming to WordPress.org
           </span>
         </nav>
       </header>
@@ -205,7 +205,7 @@ export default function AdresseCheck() {
                 >
                   See how it works
                 </a>
-                <span className="text-sm text-black/60">Launching on the WooCommerce Marketplace</span>
+                <span className="text-sm text-black/60">Free, coming soon to WordPress.org</span>
               </div>
               <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-black/70">
                 {['Checkout blocks', 'HPOS compatible', 'Official address data', 'Danish & English'].map((label) => (
@@ -341,11 +341,11 @@ export default function AdresseCheck() {
             <div className="rounded-3xl bg-[#2f3234] text-white p-8 md:p-10 flex flex-col justify-between">
               <div>
                 <h2 className="text-3xl font-medium tracking-tight">
-                  Coming soon to the <span className="text-[#F8E81C]">WooCommerce Marketplace</span>
+                  Free, coming soon to <span className="text-[#F8E81C]">WordPress.org</span>
                 </h2>
                 <p className="mt-4 text-white/70">
-                  We&apos;re preparing AdresseCheck for the official WooCommerce Marketplace, where you&apos;ll be able
-                  to buy it with updates and support.
+                  AdresseCheck is on its way to the official WordPress.org plugin directory, so you&apos;ll be able to
+                  install it for free, straight from your WordPress dashboard.
                 </p>
               </div>
               <p className="mt-8 text-sm text-white/50">
