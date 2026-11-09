@@ -1,5 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import Link from 'next/link'
+import BrowserFrame from '../components/BrowserFrame'
+import Highlight from '../components/Highlight'
+import Icon from '../components/Icon'
 
 const description =
   "AdresseCheck adds Danish address autocomplete to WooCommerce checkout, using Denmark's official address register. Fewer typos, fewer failed deliveries."
@@ -104,57 +107,6 @@ const faqs = [
   },
 ]
 
-function Icon({ name, className = 'w-6 h-6' }) {
-  const paths = {
-    truck:
-      'M3 7h11v9H3zM14 10h4l3 3v3h-7M7.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM17.5 19a1.5 1.5 0 100-3 1.5 1.5 0 000 3z',
-    bolt: 'M13 3L5 13h6l-1 8 8-10h-6l1-8z',
-    spark: 'M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6',
-    check: 'M5 12.5l4.5 4.5L19 7.5',
-    pin: 'M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21zM12 12a2.5 2.5 0 100-5 2.5 2.5 0 000 5z',
-  }
-
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d={paths[name]} />
-    </svg>
-  )
-}
-
-function BrowserFrame({ shot, priority = false, className = '' }) {
-  return (
-    <div className={`rounded-2xl bg-white shadow-2xl shadow-black/10 ring-1 ring-black/5 overflow-hidden ${className}`}>
-      <div className="flex items-center gap-1.5 px-4 py-3 border-b border-black/5 bg-[#f4f8fb]">
-        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
-        <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-3 text-xs text-black/40 truncate">yourstore.dk/checkout</span>
-      </div>
-      <Image
-        src={shot.src}
-        width={shot.width}
-        height={shot.height}
-        alt={shot.alt}
-        layout="responsive"
-        priority={priority}
-      />
-    </div>
-  )
-}
-
-function Highlight({ children }) {
-  return <span className="bg-[linear-gradient(transparent_62%,#F8E81C_62%)] px-1 -mx-1">{children}</span>
-}
-
 function SectionHeading({ eyebrow, title, intro }) {
   return (
     <div className="max-w-2xl mx-auto text-center mb-12">
@@ -194,12 +146,20 @@ export default function AdresseCheck() {
 
       <header className="sticky top-0 z-20 bg-[#fbfbf8]/80 backdrop-blur border-b border-black/5">
         <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#top" className={`${plainLink} flex items-center gap-2 text-lg`}>
-            <span className="inline-flex w-8 h-8 rounded-lg bg-[#F8E81C] items-center justify-center">
-              <Icon name="pin" className="w-5 h-5" />
+          <div className="flex items-center gap-3">
+            <a href="#top" className={`${plainLink} flex items-center gap-2 text-lg`}>
+              <span className="inline-flex w-8 h-8 rounded-lg bg-[#F8E81C] items-center justify-center">
+                <Icon name="pin" className="w-5 h-5" />
+              </span>
+              AdresseCheck
+            </a>
+            <span className="hidden sm:inline text-sm text-black/40">
+              by{' '}
+              <Link href="/">
+                <a className={`${plainLink} font-normal text-black/60 hover:text-black`}>Sixth</a>
+              </Link>
             </span>
-            AdresseCheck
-          </a>
+          </div>
           <div className="hidden md:flex items-center gap-8 text-sm">
             <a href="#how-it-works" className={`${plainLink} font-normal text-black/60 hover:text-black`}>
               How it works
@@ -385,9 +345,9 @@ export default function AdresseCheck() {
               </div>
               <p className="mt-8 text-sm text-white/50">
                 Made in Denmark by{' '}
-                <a href="https://sixth.dk" className={`${plainLink} text-white underline underline-offset-4`}>
-                  Sixth
-                </a>
+                <Link href="/">
+                  <a className={`${plainLink} text-white underline underline-offset-4`}>Sixth</a>
+                </Link>
               </p>
             </div>
           </div>
